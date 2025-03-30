@@ -19,8 +19,8 @@ A branch is essentially a copy of your code base where you can safely make chang
 •	Create feature branches like feature/login to isolate work
 
 ________________________________________
-**📂 Creating a Repository**
-🧭 Step 1: Navigate to Repos
+**📂 Step 1: Creating a Repository**
+🧭 Navigate to Repos
 
 Go to the left panel and click on Repos > Files. This will take you to the repositories section.
 Then from the top dropdown, select or filter existing repositories, or click on New repository to create a fresh one.
@@ -37,8 +37,7 @@ Once you click on New repository, you will see a dialog box. Here’s what to do
  ![image](https://github.com/user-attachments/assets/61b861d5-6883-4afa-a7bf-0ce44cba350c)
 ________________________________________
 
-**🌿 Creating a New Branch
-🌱 Step 3: Go to Branches**
+**Step 3:🌿 Creating a New Branch**
 
 To manage branches, click on Branches from the left panel.
 You’ll see the list of current branches like main, develop, etc. You can also track changes (ahead/behind), commits, and more here.
