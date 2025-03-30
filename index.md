@@ -53,6 +53,7 @@ Click the New branch button to open the branch creation form.
 Click Create when done.
 ![image](https://github.com/user-attachments/assets/f3a9db7d-4a04-469f-8435-b50f7a90db4c)
 
+
 Make the develop branch created as Default and main branch as compare branch.
 •	Default Branch: This is the branch where all commits will go by default unless specified otherwise. In most Git workflows, develop is used as the default because it represents the active development line.
 •	Compare Branch: This is used to compare other branches against. Typically, main is set as the compare branch since it reflects the stable production-ready state.
