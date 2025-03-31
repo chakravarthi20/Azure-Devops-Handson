@@ -3,6 +3,7 @@
 Open Git Bash and navigate your project folder.
 cd desktop
 cd adp-09
+
 ![image](https://github.com/user-attachments/assets/737a6507-6de9-4bb5-9d94-e3a8ae955b6f)
 
 ### Step 7: Generate SSH Key
