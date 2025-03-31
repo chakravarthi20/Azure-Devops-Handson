@@ -1,5 +1,5 @@
-🔐 SSH Key Setup for Azure DevOps
-Step 6: Navigate to Project Directory
+#🔐 SSH Key Setup for Azure DevOps
+### Step 6: Navigate to Project Directory
 Open Git Bash and navigate your project folder.
 cd desktop
 cd adp-09
