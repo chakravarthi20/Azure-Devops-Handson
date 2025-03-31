@@ -1,0 +1,36 @@
+🔐 SSH Key Setup for Azure DevOps
+Step 6: Navigate to Project Directory
+Open Git Bash and navigate your project folder.
+cd desktop
+cd adp-09
+ 
+Step 7: Generate SSH Key
+Run the following command:
+ssh-keygen -t rsa-sha2-512
+Follow the prompts to save your key and add a passphrase if needed.
+ 
+Step 8: Verify Key Files Created
+Navigate to your project folder and ensure your key and .pub files were generated.
+ 
+Step 9: Open Azure DevOps SSH Settings
+Go to Azure DevOps > User Settings > SSH public keys
+ 
+Step 10: Add New SSH Key
+Click New Key, give it a name, and paste the contents of your .pub file.
+ Step 11: Add SSH Key to Agent
+Run the following commands:
+eval $(ssh-agent -s)
+ssh-add /c/Users/YourName/Desktop/ADP-09/test
+ssh-add -l
+ ________________________________________
+🔄 Cloning Repository with SSH
+Step 12: Clone Your Repo
+Use the SSH clone URL from Azure DevOps:
+git clone git@ssh.dev.azure.com:v3/ChakravarthiSangoju/Testing/asp-net-webapp
+ 
+________________________________________
+📋 Git Branch Check
+Step 13: Check Git Status
+Navigate into the cloned project and run:
+git status
+ 
