@@ -49,7 +49,7 @@ git clone git@ssh.dev.azure.com:v3/ChakravarthiSangoju/Testing/asp-net-webapp
 ![image](https://github.com/user-attachments/assets/bf0a44fa-57e8-43ce-bccb-23be22543560)
 
 ________________________________________
-### 📋Step 13: Git Branch Check -  Check Git Status
+### 📋Step 8: Git Branch Check -  Check Git Status
 Navigate into the cloned project and run:
 git status
 ![image](https://github.com/user-attachments/assets/4aeb575c-dc83-45e1-b092-69eb3443c541)
