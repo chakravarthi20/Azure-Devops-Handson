@@ -30,6 +30,7 @@ Agent pool: Leave as Azure Pipelines (It is the free version given by microsfot,
 Agent specification: Set to windows-2019 (default for .NET builds)
 Solution path: Use wildcard for .sln like **/*.sln
 Artifact name: Use any names like drop(default) to store build outputs
+![image](https://github.com/user-attachments/assets/8df900fb-9234-49b1-ab03-22a6867f2acc)
 
 
 ### Step 6: Agent Job & Demands
@@ -52,3 +53,9 @@ You’ll see logs, job success/failure status, and artifact summary.
 Click on the published artifacts to view contents like .zip or .xml that were generated during the build.
 ![image](https://github.com/user-attachments/assets/53f5af41-1f92-4bfc-a4ad-efa6c3f9e3b0)
 ![image](https://github.com/user-attachments/assets/41ecd4b7-e753-4bc5-9eff-8fca80e21293)
+
+### You've now:
+
+- Set up a complete Azure DevOps classic build pipeline
+- Configured agents, solution path, and artifacts
+- Verified pipeline execution and outputs
