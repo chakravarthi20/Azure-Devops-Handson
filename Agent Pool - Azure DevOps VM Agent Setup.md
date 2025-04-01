@@ -127,5 +127,13 @@ Go to Azure DevOps > Agent Pool Linux-AG > Agents tab. You should see your VM li
 
 ![image](https://github.com/user-attachments/assets/978c2346-db09-4c93-907e-6e63aebcdc3b)
 
+### To run the agent as a service:
 
+- Start the service: sudo ./svc.sh start
+- Stop the service: sudo ./svc.sh stop
+- Uninstall the service: sudo ./svc.sh uninstall
+- Then run: ./config.sh remove
+
+Note: If you are doing for Windows agent, you’ll be prompted to run it as a service—select “Yes” so you don’t have to start it manually each time.
+Note: After completing everything, ensure you delete the VM and all resources in the Azure resource group.
 ### ✅ You have successfully set up a self-hosted Linux agent in Azure DevOps!
