@@ -121,17 +121,11 @@ Listening for Jobs
 
 ![image](https://github.com/user-attachments/assets/304596fb-005b-4138-84d2-4e482ae465b0)
 
-Final Verification, your agent become online, now you can use in where ever pipeline you want to run
+### Final Verification, Agent Online Confirmation
+
+Go to Azure DevOps > Agent Pool Linux-AG > Agents tab. You should see your VM listed as Online with status Idle.
 
 ![image](https://github.com/user-attachments/assets/978c2346-db09-4c93-907e-6e63aebcdc3b)
 
 
-Agent Online Confirmation
-
-Go to Azure DevOps > Agent Pool Linux-AG > Agents tab. You should see your VM listed as Online with status Idle.
-
-(Refer to Screenshot below)
-
-
-
-✅ You have successfully set up a self-hosted Linux agent in Azure DevOps!
+### ✅ You have successfully set up a self-hosted Linux agent in Azure DevOps!
