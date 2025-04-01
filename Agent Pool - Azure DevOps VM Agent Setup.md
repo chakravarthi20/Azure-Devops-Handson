@@ -73,7 +73,7 @@ Configure the Agent on VM
 
 Copy the Public IP Address from Azure VM dashboard.Open Git Bash:
 
-ssh azureuser@<your-vm-ip>
+ssh azureuser@{your-vm-ip}
 
 Enter your password when prompted. You’re now connected to the VM.
 
