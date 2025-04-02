@@ -36,7 +36,11 @@ The goal of this repo is to help you quickly understand and apply core Azure Dev
 8. **Deploying to Azure Web App using Release Pipelines**
    - Creating a release pipeline to deploy your build artifacts.
    - Running a release and verifying deployment to Azure Web App.
-
+     
+9. **Pre-deployment and Post-deployment Conditions & Variables**
+    - What & Use pre-deployment and post-deployment conditions.
+    - What are variables & Implement variables scoped per stage.
+    - Reuse configurations with variable groups, Successfully deploy to multiple environments (Dev & Stage)
 ---
 
 ## 💡 Notes
