@@ -40,7 +40,13 @@ The goal of this repo is to help you quickly understand and apply core Azure Dev
 9. **Pre-deployment and Post-deployment Conditions & Variables**
     - What & Use pre-deployment and post-deployment conditions.
     - What are variables & Implement variables scoped per stage.
-    - Reuse configurations with variable groups, Successfully deploy to multiple environments (Dev & Stage)
+    - Reuse configurations with variable groups, Successfully deploy to multiple environments (Dev & Stage).
+  
+10. **Artifacts Feed**
+    - How to create and manage Azure Artifacts feeds.
+    - How to configure build pipelines to pack and push NuGet packages.
+    - How to assign permissions to avoid push errors.
+    - How to select the feed for restoring packages in a build, How to use private packages inside Visual Studio via NuGet.
 ---
 
 ## 💡 Notes
