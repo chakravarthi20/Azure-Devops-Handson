@@ -47,6 +47,8 @@ After registration, navigate to Certificates & secrets under the app.
 Clicked New client secret, added description and expiry (e.g. 90 days), and clicked Add.
 
 🔑 You now have a secret value (copy it immediately — it's only shown once) to complete the DevOps connection setup.
+![image](https://github.com/user-attachments/assets/4f32ffc6-ca5b-4bbe-84ed-ff220b63274b)
+
 
 ## Service Connection Summary
 Back in Azure DevOps, after filling in all values (Subscription, Client ID, Tenant ID, Secret), the service connection was created successfully.
