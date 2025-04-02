@@ -47,3 +47,29 @@ Go back to Releases → webapp-dev
 ![image](https://github.com/user-attachments/assets/f656cdb0-c550-427a-a0a5-05883bd93273)
 
 Your release is now created and will begin the deployment process to Azure App Service.
+
+### Step 6: Trigger the Release and Monitor Deployment
+Once the release is created, you can manually trigger it.
+- Go to the Releases tab.
+- Click on the newly created release under Pipeline > Releases.
+- Click Deploy or let it run if it's already started.
+You’ll see the stage (e.g., Dev) turn green once the deployment is succeeded.
+![image](https://github.com/user-attachments/assets/76e1cd73-7a5d-4044-9969-d7125dea2c29)
+
+### Step 7: Confirm the Web App is Running
+After successful deployment, open the Azure App Service URL in a browser (e.g., https://chakridevops.azurewebsites.net).
+Initially, the web app might show a “waiting for content” page if content isn't fully live yet.
+![image](https://github.com/user-attachments/assets/a6102eeb-4f05-46f9-abca-7dc0c1c559bd)
+
+
+### Step 8: Validate the Web App Output
+After a short wait, once your deployment is applied, refresh the app URL again.
+- You should now see your ASP.NET Core web application live.
+![image](https://github.com/user-attachments/assets/5834427c-4357-49a6-a6c6-3dabc68a76cd)
+
+✅ Summary – What You Learned
+- How to deploy an ASP.NET web app to Azure using Azure DevOps release pipelines.
+- How to create and configure a Release Pipeline in Azure DevOps with build artifacts and stages.
+- How to manually trigger a release and monitor the deployment status.
+- How to validate a successful deployment by checking the Azure App Service URL.
+- Understanding deployment flow from build to live deployment on Azure App Service.
