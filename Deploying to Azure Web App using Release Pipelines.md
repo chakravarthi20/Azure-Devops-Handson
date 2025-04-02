@@ -30,6 +30,7 @@ Now configure what the release should do in the stage.
 Fill the form with:
 - Connection type: Azure Resource Manager
 - Azure subscription: Select your subscription (e.g., Azure for Students Starter)
+**Note: To get the Subscription ID, and App service name (You should have the service connection and app service in portal.azure, for that please refer to Create service connection.md)**
 - App Service type: Web App on Windows
 - App Service name: Choose the app you created earlier (e.g., chakravarthi-dev)
 - $(System.DefaultWorkingDirectory)/**/*.zip = This picks the latest .zip build artifact automatically.
