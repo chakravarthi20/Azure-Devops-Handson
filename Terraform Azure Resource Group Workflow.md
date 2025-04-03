@@ -24,7 +24,8 @@ provider "azurerm" {
 resource "azurerm_resource_group" "my_demo_rg1" {
   location = "eastus"
   name     = "my-demo-rg1"
-} ```
+}
+```
 ![image](https://github.com/user-attachments/assets/a5ab5ad9-f983-4d5a-8bc4-8b318961b6d9)
 
 ### 🔹 Step 2: Initialize Terraform
@@ -68,11 +69,12 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ![image](https://github.com/user-attachments/assets/a0b79418-fcad-400c-bee1-dff7fac8687a)
 
 ### 🔁 Terraform Workflow Summary
-**Step	Command	Description**
-Write	- *.tf file	Author IaC in HCL format
-Init	- terraform init	Initialize working directory, download providers
-Validate	- terraform validate	Validate syntax and structure
-Format - 	terraform fmt	Format .tf files to standard style
-Plan	- terraform plan	Preview changes before applying
-Apply - 	terraform apply	Provision infrastructure
-Destroy	- terraform destroy	Tear down infrastructure
+| **Step**   | **Command**         | **Description**                            |
+|------------|---------------------|--------------------------------------------|
+| Write      | `*.tf` files        | Author IaC in HCL format                   |
+| Init       | `terraform init`    | Initialize working directory, download providers |
+| Validate   | `terraform validate`| Validate syntax and structure              |
+| Format     | `terraform fmt`     | Format `.tf` files to standard style       |
+| Plan       | `terraform plan`    | Preview changes before applying            |
+| Apply      | `terraform apply`   | Provision infrastructure                   |
+| Destroy    | `terraform destroy` | Tear down infrastructure                   |
