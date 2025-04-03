@@ -24,7 +24,6 @@ Download the Windows AMD64 zip file.
 - Create a folder C:\Terraform.
 - Unzip the downloaded Terraform file into this folder.
 
-
 ### ⚙️ Step 6: Set Environment Variable (PATH)
 Go to: Control Panel > System > Advanced system settings > Environment Variables
 Under System Variables, select Path → click Edit → click New → add:
@@ -35,6 +34,7 @@ C:\Terraform
 Open any terminal (Command Prompt, Git Bash, PowerShell).
 Run:
 terraform --version
+
 ![image](https://github.com/user-attachments/assets/345f815d-ea87-4906-805b-8ce6af4bbb1c)
 
 🔐 Step 8: Log in to Azure
