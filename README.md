@@ -47,6 +47,8 @@ The goal of this repo is to help you quickly understand and apply core Azure Dev
     - How to configure build pipelines to pack and push NuGet packages.
     - How to assign permissions to avoid push errors.
     - How to select the feed for restoring packages in a build, How to use private packages inside Visual Studio via NuGet.
+   
+11.  **Prerequisites for Terraform Setup with Azure**
 ---
 
 ## 💡 Notes
