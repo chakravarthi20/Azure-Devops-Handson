@@ -4,7 +4,7 @@ This guide walks through creating a resource group in Azure using Terraform, fol
 ### 📁 Step 1: Create Project Folder and Terraform File
 - Create a folder (e.g., resource-group) and inside it, create a file named resource-group.tf with the following code:
 
-# Terraform Settings Block
+// Terraform Settings Block
 terraform {
   required_version = ">= 1.0.0"
   required_providers {
@@ -15,12 +15,12 @@ terraform {
   }
 }
 
-# Configure the Microsoft Azure Provider
+// Configure the Microsoft Azure Provider
 provider "azurerm" {
   features {}
 }
 
-# Create Resource Group
+// Create Resource Group
 resource "azurerm_resource_group" "my_demo_rg1" {
   location = "eastus"
   name     = "my-demo-rg1"
