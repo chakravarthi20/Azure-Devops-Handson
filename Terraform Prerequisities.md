@@ -37,7 +37,7 @@ terraform --version
 
 ![image](https://github.com/user-attachments/assets/345f815d-ea87-4906-805b-8ce6af4bbb1c)
 
-🔐 Step 8: Log in to Azure
+### 🔐 Step 8: Log in to Azure
 From the terminal, navigate to:
 - cd C:\Terraform -> az login
 It will open a browser to authenticate and show your Azure subscriptions. ✅ As seen in pic 6, you're successfully logged into your Azure account and ready to run Terraform scripts on Azure resources.
