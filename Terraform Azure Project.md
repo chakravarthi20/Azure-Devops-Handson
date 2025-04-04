@@ -29,6 +29,7 @@ resource "azurerm_resource_group" "rg" {  # Defines Azure Resource Group named m
 }
 ```
 ### Creating storage account through terraform
+```hcl
 resource "azurerm_storage_account" "devops" {     # Declares an Azure Storage Account resource name
   name                     = "devopschakri"       # Globally unique name of the storage account
   resource_group_name      = azurerm_resource_group.rg.name      # Uses the name of previously created resource group named rg
@@ -36,6 +37,7 @@ resource "azurerm_storage_account" "devops" {     # Declares an Azure Storage Ac
   account_tier             = "Standard"           # Storage account tier
   account_replication_type = "LRS"                # Replication type (Locally Redundant Storage)
 }
+```
 ![image](https://github.com/user-attachments/assets/2930336a-4c42-4a80-8bf1-9910bd9b2f3d)
 
 
@@ -53,6 +55,7 @@ Terraform backend determines how state is loaded and how an operation such as ap
 
 
 ### 📄Creating backend using terraform 
+```hcl
 terraform {
   required_version = ">=1.0.0"                    # Minimum Terraform version
   required_providers {
@@ -76,6 +79,7 @@ resource "azurerm_resource_group" "rg" {          # Recreates the resource group
   name     = "dev-rg"
   location = "eastus"
 }
+```
 ![image](https://github.com/user-attachments/assets/786578a9-a8af-40b3-b7fc-cbc96810c37c)
 
 **📝 Note:** The container blob was manually created in the Azure Portal under the storage account devopschakri. This is necessary because Terraform cannot create the container before it reads the backend configuration, so it must exist beforehand.
