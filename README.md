@@ -47,17 +47,23 @@ The goal of this repo is to help you quickly understand and apply core Azure Dev
     - How to configure build pipelines to pack and push NuGet packages.
     - How to assign permissions to avoid push errors.
     - How to select the feed for restoring packages in a build, How to use private packages inside Visual Studio via NuGet.
-   
-11.  **Prerequisites for Terraform Setup with Azure**
+
+11. **Prerequisites for Terraform Setup with Azure**
     - Installation of pre requisites and Terraform
    
-12.  **Terraform Azure Resource Group Workflow**
+12. **Terraform Azure Resource Group Workflow**
     - Workflow of terraform (Initialize , Validate, Format, Plan, Apply, Destroy) with executions.
      
-13.  **Building Azure Infrastructure with Terraform using Remote Backend**
+13. **Building Azure Infrastructure with Terraform using Remote Backend**
     - Terraform basic code structure explanation with resource group creation
     - How to create a storage account using terraform
     - what is terraform backend, how to implement that.
+      
+14. **End-to-End Terraform Deployment with Azure DevOps Pipeline**
+    - Modular Project Setup
+    - Backend Configuration
+    - Git Integration & Deployment:
+    - Azure DevOps Pipeline Execution
 ---
 
 ## 💡 Notes
