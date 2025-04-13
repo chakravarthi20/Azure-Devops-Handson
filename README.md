@@ -64,6 +64,12 @@ The goal of this repo is to help you quickly understand and apply core Azure Dev
     - Backend Configuration
     - Git Integration & Deployment:
     - Azure DevOps Pipeline Execution
+
+15. **azure-devops-sql-database-automation**
+    - What is database automation, Why, How and types
+    - Automated SQL Deployment: Created Azure SQL Server/Database manually, extracted DACPAC via SSMS, and imported it into a Visual Studio SQL project.
+    - CI/CD Pipelines Setup: Built a CI pipeline to generate .dacpac and .sql artifacts, and a release pipeline to deploy schema (DACPAC) and data (Insert script) to Azure SQL.
+    - End-to-End Success: Final release pipeline shows successful deployment of both schema and data, confirming full database automation.
 ---
 
 ## 💡 Notes
