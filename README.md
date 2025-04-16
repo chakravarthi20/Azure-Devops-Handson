@@ -70,6 +70,16 @@ The goal of this repo is to help you quickly understand and apply core Azure Dev
     - Automated SQL Deployment: Created Azure SQL Server/Database manually, extracted DACPAC via SSMS, and imported it into a Visual Studio SQL project.
     - CI/CD Pipelines Setup: Built a CI pipeline to generate .dacpac and .sql artifacts, and a release pipeline to deploy schema (DACPAC) and data (Insert script) to Azure SQL.
     - End-to-End Success: Final release pipeline shows successful deployment of both schema and data, confirming full database automation.
+
+16. **azure-devops-sql-database-automation(DacPac)**
+    - Created an Azure SQL Server and Database manually, extracted a DACPAC (schema only) using SSMS, and imported it into a Visual Studio SQL Database Project for automation.
+    - Set up CI/CD pipelines in Azure DevOps: Configured a build pipeline to generate DACPAC, and a release pipeline with two stages – schema deployment via DACPAC and data insertion via SQL script.
+    - Implemented changes (new table and data insert script), pushed to Azure Repos triggering the pipelines, resulting in a successful end-to-end automated database deployment.
+      
+17. **Create Azure Key Vault Integration with Azure DevOps**
+   - Created Azure Key Vault and securely stored db-pass as a secret.
+   - Gave Azure DevOps access using access policies by linking the service principal (found via Entra ID).
+   - Linked the secret in Azure DevOps library and securely used it in pipelines.
 ---
 
 ## 💡 Notes
