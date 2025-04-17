@@ -77,9 +77,16 @@ The goal of this repo is to help you quickly understand and apply core Azure Dev
     - Implemented changes (new table and data insert script), pushed to Azure Repos triggering the pipelines, resulting in a successful end-to-end automated database deployment.
       
 17. **Create Azure Key Vault Integration with Azure DevOps**
-   - Created Azure Key Vault and securely stored db-pass as a secret.
-   - Gave Azure DevOps access using access policies by linking the service principal (found via Entra ID).
-   - Linked the secret in Azure DevOps library and securely used it in pipelines.
+    - Created Azure Key Vault and securely stored db-pass as a secret.
+    - Gave Azure DevOps access using access policies by linking the service principal (found via Entra ID).
+    - Linked the secret in Azure DevOps library and securely used it in pipelines.
+
+18. **Docker_Nginx_Full_Deployment_on_Azure_VM_with_Volumes**
+    - Docker Installation on Azure VM: Connected to an Ubuntu VM via SSH, installed Docker manually using official repository commands, and verified installation.
+    - Container Deployment: Pulled the Nginx image, launched a container mapping internal port 80 to external port 8080, and set up Azure inbound security rules to expose the application.
+    - Custom Web Deployment and Persistence: Deployed a custom HTML page inside the Nginx container, then implemented a volume mount to persist data across container restarts.
+
+Dockerfile Understanding: Explained the concept of Dockerfile instructions and how images are built automatically using a Dockerfile, ensuring consistent deployments.
 ---
 
 ## 💡 Notes
