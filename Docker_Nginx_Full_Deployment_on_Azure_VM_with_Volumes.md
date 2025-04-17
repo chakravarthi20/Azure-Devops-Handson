@@ -61,12 +61,12 @@ After login, you see standard Ubuntu welcome messages showing:
 
 ### 2️⃣ Installed Docker using script file (explaining commands)
 Here are the commands I used:
-sudo apt update - 	**Updates the Ubuntu package index to latest versions.**
-sudo apt install apt-transport-https ca-certificates curl software-properties-common -y	- **Installs packages necessary to download and install from HTTPS repositories.**
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg	sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"	- **Adds Docker’s official repository to apt sources list.**
-sudo apt update -	**Updates sources list again after adding Docker repository.**
-sudo apt install docker-ce -y - **Installs Docker Community Edition.**
+- sudo apt update - 	**Updates the Ubuntu package index to latest versions.**
+- sudo apt install apt-transport-https ca-certificates curl software-properties-common -y	- **Installs packages necessary to download and install from HTTPS repositories.**
+- curl -fsSL https://download.docker.com/linux/ubuntu/gpg	sudo apt-key add -
+- sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"	- **Adds Docker’s official repository to apt sources list.**
+- sudo apt update -	**Updates sources list again after adding Docker repository.**
+- sudo apt install docker-ce -y - **Installs Docker Community Edition.**
 ```
 sudo apt update
 sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
@@ -91,10 +91,10 @@ I verified nginx image is downloaded — Size: 192 MB.
 
 ### 4️⃣ Deep Commands and Output Explained 
 Command	Explanation
-sudo docker run -d nginx	**Run nginx container in detached mode (-d) (runs in background).**
-sudo docker ps	**Show running containers (Container ID, Status, Ports, Names, etc.).**
-sudo docker logs <container_id>	**See real-time logs of the running container (e.g., nginx starting).**
-sudo docker inspect <container_id>	**Get detailed low-level information about container (environment, volumes, ports, etc.).**
+- sudo docker run -d nginx	**Run nginx container in detached mode (-d) (runs in background).**
+- sudo docker ps	**Show running containers (Container ID, Status, Ports, Names, etc.).**
+- sudo docker logs <container_id>	**See real-time logs of the running container (e.g., nginx starting).**
+- sudo docker inspect <container_id>	**Get detailed low-level information about container (environment, volumes, ports, etc.).**
 🧠 Important:
 Always use first few digits of container ID (e.g., 97a) — Docker uniquely identifies it.
 
@@ -103,21 +103,18 @@ Always use first few digits of container ID (e.g., 97a) — Docker uniquely iden
 
 
 ### 5️⃣ Added Inbound Rule (Pic 4)
-🎯 Reason why i am adding:
-By default, only SSH (port 22) is open.
-Since nginx listens on port 80 inside container, and we map it to 8080 externally, we have to allow incoming HTTP traffic on port 8080 to access nginx from browser.
-In Azure Portal > VM > Network Settings, I added an Inbound Rule:
-Allowed Port 8080 from Any source.
-Protocol: TCP
+🎯 Reason why i am adding: By default, only SSH (port 22) is open.
+- Since nginx listens on port 80 inside container, and we map it to 8080 externally, we have to allow incoming HTTP traffic on port 8080 to access nginx from browser.
+- In Azure Portal > VM > Network Settings, I added an Inbound Rule: Allowed Port 8080 from Any source, Protocol: TCP
 ✅ Without this step, you can’t open nginx page from your laptop.
 ![image](https://github.com/user-attachments/assets/3d193a98-274a-4b27-974b-3e4d52675e06)
 
 
 ### 6️⃣ Stopping & Mapping Container (Pic 5)
 Command	Purpose
-sudo docker stop <container_id>	**Stop existing container**
-sudo docker rm <container_id>	**Remove stopped container**
-sudo docker run -d -p 8080:80 nginx	**Re-run nginx with port mapping: Maps VM's port 8080 → Container’s port 80**
+- sudo docker stop <container_id>	**Stop existing container**
+- sudo docker rm <container_id>	**Remove stopped container**
+- sudo docker run -d -p 8080:80 nginx	**Re-run nginx with port mapping: Maps VM's port 8080 → Container’s port 80**
 🎯 Now when someone hits VM_Public_IP:8080, it goes into container’s port 80 where nginx listens!
 ![image](https://github.com/user-attachments/assets/3937f5b6-febf-4bd4-bc9f-06e6e5e727f8)
 
@@ -145,17 +142,17 @@ When I opened the VM public IP at port 8080, it showed "Welcome to docker" — m
 Mount VM folder to container.
 
 **Command	Purpose**:
-sudo mkdir /opt/vol	**Create a directory /opt/vol on VM.**
-sudo mv index.html /opt/vol/	**Move HTML file into /opt/vol.**
-sudo docker run -v /opt/vol:/usr/share/nginx/html -p 8080:80 -d nginx	**Mount /opt/vol into container’s /usr/share/nginx/html.**
+- sudo mkdir /opt/vol	**Create a directory /opt/vol on VM.**
+- sudo mv index.html /opt/vol/	**Move HTML file into /opt/vol.**
+- sudo docker run -v /opt/vol:/usr/share/nginx/html -p 8080:80 -d nginx	**Mount /opt/vol into container’s /usr/share/nginx/html.**
 🎯 So now nginx directly reads files from VM's disk.
 Even if container is killed, data remains safe!
 ![image](https://github.com/user-attachments/assets/53fd40fb-b774-46e0-a82f-9bbe7c96cd17)
 
 ### 9️⃣ Container Stop Verification (Pic 9)
-Stopped container:
+**Stopped container:**
 sudo docker stop <container_id>
-Checked VM disk:
+**Checked VM disk:**
 ls /opt/vol
 ✅ index.html file is still present!
 🎯 This confirms that by using volumes we achieve persistence — container independent storage!
