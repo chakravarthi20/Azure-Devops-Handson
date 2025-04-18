@@ -84,9 +84,14 @@ The goal of this repo is to help you quickly understand and apply core Azure Dev
 18. **Docker_Nginx_Full_Deployment_on_Azure_VM_with_Volumes**
     - Docker Installation on Azure VM: Connected to an Ubuntu VM via SSH, installed Docker manually using official repository commands, and verified installation.
     - Container Deployment: Pulled the Nginx image, launched a container mapping internal port 80 to external port 8080, and set up Azure inbound security rules to expose the application.
-    - Custom Web Deployment and Persistence: Deployed a custom HTML page inside the Nginx container, then implemented a volume mount to persist data across container restarts.
+    - Custom Web Deployment and Persistence: Deployed a custom HTML page inside the Nginx container, then implemented a volume mount to persist data across       container restarts.
+    - Dockerfile Understanding: Explained the concept of Dockerfile instructions and how images are built automatically using a Dockerfile, ensuring consistent deployments.
+   
+19. **End-to-End Docker WebApp Deployment with Azure DevOps and Azure Container Registry**
+   - Connected Docker VM with Azure DevOps using SSH keys, cloned ASP.NET project, created a Dockerfile, built and deployed a containerized app.
+   - Created Azure Container Registry, logged in from VM, tagged and pushed the Docker image successfully to ACR.
+   - Learned and practiced Docker Compose, defined multi-container setup (app + nginx) easily with YAML configuration.
 
-Dockerfile Understanding: Explained the concept of Dockerfile instructions and how images are built automatically using a Dockerfile, ensuring consistent deployments.
 ---
 
 ## 💡 Notes
