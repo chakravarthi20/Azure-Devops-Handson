@@ -28,6 +28,7 @@ Kubernetes ensures:
 - API Server: Communication hub.
 - Controller Manager: Handles controllers like Deployment Controller, Node Controller.
 - Scheduler: Decides which Pod runs where.
+![image](https://github.com/user-attachments/assets/38cb55c7-cd38-4231-836d-3afc8f36de50)
 
 ### 5. Kubernetes Setup Strategy (Minikube vs kubeadm)
 **Minikube**: 1 VM (Master + Worker) for development/testing only.
@@ -101,10 +102,15 @@ kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.25/net.yaml
 ✅ Now cluster is ready to deploy applications!
 
 # ✅ Summary:
-Step | Action | Purpose |
-1 | Create Azure VM | Host Kubernetes cluster |
-2 | Install Docker | Container runtime required |
-3 | Install kubeadm, kubelet, kubectl | Kubernetes core tools |
-4 | kubeadm init | Initialize master node |
-5 | Configure kubectl | Interact with cluster |
-6 | Install CNI | Enable networking in cluster |
+# Kubernetes Cluster Setup on Azure VM
+This table outlines the core steps to set up a Kubernetes cluster manually on an Azure Virtual Machine using `kubeadm`.
+
+| Step | Action                              | Purpose                                |
+|------|-------------------------------------|----------------------------------------|
+| 1    | Create Azure VM                     | Host the Kubernetes cluster            |
+| 2    | Install Docker                      | Required container runtime             |
+| 3    | Install `kubeadm`, `kubelet`, `kubectl` | Kubernetes core tools                 |
+| 4    | `kubeadm init`                      | Initialize the Kubernetes master node  |
+| 5    | Configure `kubectl`                 | Allow interaction with the cluster     |
+| 6    | Install CNI plugin (e.g., Calico, Flannel) | Enable networking between pods      |
+
