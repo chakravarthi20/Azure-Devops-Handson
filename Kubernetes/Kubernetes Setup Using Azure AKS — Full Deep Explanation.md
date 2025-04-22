@@ -98,6 +98,8 @@ Deployment: web-deploy
 ![image](https://github.com/user-attachments/assets/4da94fb5-a044-4f66-8108-de4dc099389e)
 
 ### 6 - "Kubernetes Services Overview"
+![image](https://github.com/user-attachments/assets/d477f04c-aea6-4b83-8f88-085d1f9dd5aa)
+
 - ClusterIP:Default type.
 - Internal communication only.
 - NodePort: Exposes the service on a static port between 30000-32767 on each Node IP.
