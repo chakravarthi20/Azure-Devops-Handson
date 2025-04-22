@@ -98,6 +98,8 @@ Applied CNI plugin:
 ```
 kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.25/net.yaml
 ```
+
+**If you are getting errors, Use Ubuntu 20.04.6 Version and Disable swap off with this command: sudo swapoff -a**
 **CNI plugin is required to enable networking between Pods inside Kubernetes.**
 ✅ Now cluster is ready to deploy applications!
 
