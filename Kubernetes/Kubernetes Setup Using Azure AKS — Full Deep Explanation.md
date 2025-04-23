@@ -98,7 +98,7 @@ Deployment: web-deploy
 ![image](https://github.com/user-attachments/assets/4da94fb5-a044-4f66-8108-de4dc099389e)
 
 ### 6 - Kubernetes Services Overview
-![image](https://github.com/user-attachments/assets/8f9a078a-4bc5-49c4-b005-00bb251b1175)
+![image](https://github.com/user-attachments/assets/55368179-8982-4a23-b1e8-4d81618fa569)
 
 - ClusterIP:Default type.
 - Internal communication only.
