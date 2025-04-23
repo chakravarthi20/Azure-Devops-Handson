@@ -98,7 +98,7 @@ Deployment: web-deploy
 ![image](https://github.com/user-attachments/assets/4da94fb5-a044-4f66-8108-de4dc099389e)
 
 ### 6 - Kubernetes Services Overview
-![image](https://github.com/user-attachments/assets/d477f04c-aea6-4b83-8f88-085d1f9dd5aa)
+![image](https://github.com/user-attachments/assets/8f9a078a-4bc5-49c4-b005-00bb251b1175)
 
 - ClusterIP:Default type.
 - Internal communication only.
@@ -118,7 +118,7 @@ kubectl get all
 --port 80: Exposes service at HTTP Port 80.
 --name=nginx-svc: Names the service.
 --type=LoadBalancer: Azure will create a public IP address.
-
+![image](https://github.com/user-attachments/assets/d477f04c-aea6-4b83-8f88-085d1f9dd5aa)
 
 **Now shows your service of type LoadBalancer with an External-IP.**
 curl http://<External-IP>
