@@ -128,5 +128,7 @@ Tests the Nginx web server by directly accessing the external IP address.
 ✅ Summary:
 You successfully exposed your deployed application over the internet and verified it using curl!
 
-# Final Summary:
-✅ Deployed a Kubernetes Cluster on Azure AKS, launched scalable Nginx deployments, exposed them to the internet using LoadBalancer, and practiced scaling and service concepts.
+#✅ Final Summary:
+- Deployed a Kubernetes Cluster on Azure AKS launched scalable Nginx deployments
+- Exposed them to the internet using LoadBalancer
+- Practiced scaling and service concepts.
