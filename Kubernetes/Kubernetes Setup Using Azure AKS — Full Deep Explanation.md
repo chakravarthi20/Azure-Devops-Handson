@@ -14,7 +14,7 @@
 Docker only runs containers. Kubernetes manages those containers automatically — scaling, self-healing, networking, etc.
 
 ## Now starting setup:
-###  1 - "Create Kubernetes Cluster"
+###  1 - Create Kubernetes Cluster
 We are using Azure Kubernetes Service (AKS), a fully-managed Kubernetes environment.
 - Resource Group: You created a new "devops" group – a logical container to group resources.
 - Kubernetes Cluster Name: "devopsaks" → Naming your cluster.
@@ -27,7 +27,7 @@ We are using Azure Kubernetes Service (AKS), a fully-managed Kubernetes environm
 Created a managed Kubernetes Cluster ready for workloads, with minimum resources and FREE plan.
 ![image](https://github.com/user-attachments/assets/cf5cfa9c-a3f8-434c-8338-ba393497bab4)
 
-### 2 - "Node Pool Configuration"
+### 2 - Node Pool Configuration
 - Node Pool Name: "agentpool" → Default system nodes group.
 - Mode: "System" → Main node pool to run system critical pods.
 - OS SKU: Ubuntu Linux → Most stable for Kubernetes.
@@ -39,7 +39,7 @@ Created a managed Kubernetes Cluster ready for workloads, with minimum resources
 Setting up the worker node (VM) that will run your Kubernetes workloads.
 ![image](https://github.com/user-attachments/assets/dca565a4-ee1d-4ed4-bd6e-b7278132a7bf)
 
-### 3 - "Azure Kubernetes Services (AKS) Overview"
+### 3 - Azure Kubernetes Services (AKS) Overview
 Azure manages your Kubernetes Control Plane.
 
 **Components:**
@@ -51,7 +51,7 @@ Azure manages your Kubernetes Control Plane.
 ✅ Summary:
 AKS simplifies Kubernetes — Azure manages Master node, you just worry about worker nodes and pods.
 
-### 4 - "Shell: Getting Cluster Credentials"
+### 4 - Shell: Getting Cluster Credentials
 Commands Explained:
 ```
 az aks get-credentials --resource-group devops --name devopsaks
@@ -70,7 +70,7 @@ kubectl get pods
 ✅ Summary:
 You authenticated to your AKS cluster and deployed your first Nginx Pod successfully!
 
-### 5- "Deployments and Replicas Management"
+### 5- Deployments and Replicas Management
 Commands Explained:
 ```
 kubectl create deployment --image=nginx web-deploy --replicas=10
@@ -97,7 +97,7 @@ Deployment: web-deploy
 (Each pod contains Nginx container.)
 ![image](https://github.com/user-attachments/assets/4da94fb5-a044-4f66-8108-de4dc099389e)
 
-### 6 - "Kubernetes Services Overview"
+### 6 - Kubernetes Services Overview
 ![image](https://github.com/user-attachments/assets/d477f04c-aea6-4b83-8f88-085d1f9dd5aa)
 
 - ClusterIP:Default type.
@@ -108,7 +108,7 @@ Deployment: web-deploy
 ✅ Summary:
 Services expose your applications inside and outside of the cluster depending on the type selected.
 
-### 7 - "Exposing Service + Verifying Output"
+### 7 - Exposing Service + Verifying Output
 Commands:
 ```
 kubectl expose deploy web-deploy --port 80 --name=nginx-svc --type=LoadBalancer
@@ -122,13 +122,12 @@ kubectl get all
 
 **Now shows your service of type LoadBalancer with an External-IP.**
 curl http://<External-IP>
-
 Tests the Nginx web server by directly accessing the external IP address.
 
 ✅ Summary:
 You successfully exposed your deployed application over the internet and verified it using curl!
 
-#✅ Final Summary:
+# ✅ Final Summary:
 - Deployed a Kubernetes Cluster on Azure AKS launched scalable Nginx deployments
 - Exposed them to the internet using LoadBalancer
 - Practiced scaling and service concepts.
