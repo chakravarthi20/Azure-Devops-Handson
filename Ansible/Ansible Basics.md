@@ -14,37 +14,26 @@ This guide covers Ansible from a foundational level, using a step-by-step visual
   * Reconfigured
 
 ### 🔁 Configuration Lifecycle
-
 **PLAN → IDENTIFY → CONTROL → REPORT**
-
 * **Changes** are:
-
   * ✅ Managed
   * ✅ Reviewed
   * ✅ Tracked
   * ✅ Audited
 
-### 🛠 Tools Used:
-
-*
-
 ---
 
 ## ⚙️ Ansible Overview
-
 Ansible is a **configuration management**, **deployment**, and **orchestration** tool.
-
 * It is a **"Push-based"** tool (master node pushes configurations to target nodes).
 * Boosts IT productivity through automation.
 
 ### 📈 How Ansible Works
-
 * Connects to nodes using SSH
 * Uses small programs called **modules**
 * Executes modules remotely, then removes them
 
 ### 📌 Architecture:
-
 ```text
 [Playbook]     [Inventory]
      \             /
@@ -58,7 +47,6 @@ Ansible is a **configuration management**, **deployment**, and **orchestration**
 ```
 
 ---
-
 ## ☁️ Creating an Ansible Master Node VM
 We created a basic virtual machine using Azure with the following specs:
 
@@ -81,54 +69,45 @@ sudo apt install ansible -y
 ```
 
 ---
-
 ## 📂 Ansible Inventory
-
-* Inventory defines the managed nodes you automate, with groups so you can run automation tasks on multiple hosts at the same time 
+* Inventory defines the managed nodes you automate, with groups so you can run automation tasks on multiple hosts at the same time
+  
 ### 🗂 Default Inventory File:
-
 ```bash
 /etc/ansible/hosts
 ```
 
 ### 🧾 Example Grouped Inventory:
-
 ```
-[mail]
+[mail] //module
 server3.company.com
 server4.company.com
 
-[db]
+[db] //module
 server5.company.com
 server6.company.com
 
-[web]
+[web] //module
 server7.company.com
 server8.company.com
 ```
 
-### 🔐 Inventory Parameters:
-
+### 🔐 General Inventory Parameters:
 ```
 ansible_connection = ssh
 ansible_port = 22
 ansible_user = root
 ansible_ssh_pass = <password>
 ```
-
 * **Linux**: SSH
 * **Windows**: PowerShell Remoting
-
 ---
 
 ## 📌 Writing to Inventory
-
 I edited the default inventory file using:
-
 ```bash
 vi /etc/ansible/hosts
 ```
-
 And added this line: which will provide the user name and password for that IP
 ```
 4.227.237.117 ansible_connection=ssh ansible_user=ansible ansible_ssh_pass=Chakri@316998
@@ -144,16 +123,16 @@ And added this line: which will provide the user name and password for that IP
 ```bash
 ansible all -m ping
 ```
+- all is  inventory group "all," meaning the command will be executed on all hosts defined in your Ansible inventory.
+- m is for module 
 
 **Expected Output:**
-
 ```json
 "ping": "pong"
 ```
 
 ### 🖥 Shell Command:
 ![image](https://github.com/user-attachments/assets/d469db87-9558-488e-9586-75fe91accd7a)
-
 ```bash
 ansible all -m shell -a 'ls'
 ```
